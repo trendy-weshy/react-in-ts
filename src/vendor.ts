@@ -4,3 +4,4 @@
 
 import 'react';
 import 'react-dom';
+import './main.scss';

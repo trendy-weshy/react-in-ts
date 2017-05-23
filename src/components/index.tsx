@@ -1,6 +1,7 @@
 /**
  * created by waweru
  */
+
 import * as React from 'react';
 
 interface IHelloProps {
@@ -12,7 +13,7 @@ class Hello extends React.Component<IHelloProps, any> {
 
   public render() {
     return (
-      <div>
+      <div style={{margin: 0, padding: 0}}>
         <h5>Hello there, {this.props.name}</h5>
         <p>version: {(this.props.version) ? this.props.version : 'none'}</p>
       </div>

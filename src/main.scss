@@ -1,0 +1,31 @@
+/**
+ * created by waweru
+ */
+
+@import
+'./sass/dropdown.scss'
+;
+
+html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: #FFF;  
+    padding: 0;
+    margin: 0;
+}
+
+#window{
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;  
+    padding: 0;
+    margin: 0;
+}

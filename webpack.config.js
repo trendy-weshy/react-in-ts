@@ -42,6 +42,14 @@ const common={
                 }
 	        },
             {
+                test: /\.scss$/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    { loader: 'sass-loader' }
+                ]
+            },
+            {
                 test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
                 loader: 'file-loader',
                 options: {
@@ -65,6 +73,11 @@ const common={
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor'],
             allChunks: true
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
         })
     ]
 };

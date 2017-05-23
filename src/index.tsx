@@ -7,12 +7,12 @@ import * as ReactDOM from 'react-dom';
 import {default as HelloComponent} from './components/index';
 
 const rootTemplate=(
-    <div className="window">
+    <span style={{width: '100%', height: '100%', display: 'block'}}>
         <HelloComponent name="John Waweru" version="1.1.0" />
-    </div>
+    </span>
 );
 // #note: mount
 ReactDOM.render(
     rootTemplate,
-    document.getElementById('tw')
+    document.getElementById('window')
 );
