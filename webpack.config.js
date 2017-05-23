@@ -111,13 +111,14 @@ const prod={
     }
 }
 
-module.exports.devtool=devtool;
+
 if (process.env.NODE_ENV!=='production') {
     module.exports=Object.assign({}, common, {
         plugins: [...common.plugins, ...dev.plugins],
         entry: dev.entry,
         module: { rules: [...common.module.rules, ...dev.module.rules] }
     });
+    module.exports.devtool=devtool;
 }
 else {
     module.exports=Object.assign({}, common, {
@@ -125,4 +126,5 @@ else {
         entry: prod.entry,
         module: { rules: [...common.module.rules, ...prod.module.rules] }
     });
+    module.exports.devtool=devtool;
 }

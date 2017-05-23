@@ -13,7 +13,7 @@
     "class-name": true,
     "no-angle-bracket-type-assertion": true,
     "semicolon": [true, "always"],
-    "no-default-export": true,
+    "no-default-export": false,
     "switch-default": false,
     "no-construct": true
   }
