@@ -1,10 +1,8 @@
 {
   "extends": ["tslint:latest", "tslint-react"],
   "rules": {
-    "no-constant-condition": true,
     "quotemark": [true, "single", "avoid-escape", "jsx-double"],
     "no-empty-interface": true,
-    "no-import-side-effects": true,
     "no-namespace": true,
     "no-eval": true,
     "no-var-keyword": true,

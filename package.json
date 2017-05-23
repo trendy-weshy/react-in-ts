@@ -35,6 +35,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "webpack -p --display-error-details --profile --colors"
+    "build": "webpack -p --display-error-details --profile --colors",
+    "lint": "tslint -p './tsconfig.json'"
   }
 }

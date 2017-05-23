@@ -13,7 +13,7 @@ class Hello extends React.Component<IHelloProps, any> {
   public render() {
     return (
       <div>
-        <h5>Hello, {this.props.name}</h5>
+        <h5>Hello there, {this.props.name}</h5>
         <p>version: {(this.props.version) ? this.props.version : 'none'}</p>
       </div>
     );
