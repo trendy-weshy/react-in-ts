@@ -3,6 +3,7 @@
  */
 
 'use strict';
+require('dotenv').load();
 
 const path=require('path');
 const webpack=require('webpack');
@@ -93,7 +94,12 @@ const prod={
         'vendor': vendorEntry
     },
     plugins: [
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            mangle: {
+                keep_fnames: true
+            }
+        })
     ],
     module: {
         rules: [
@@ -107,9 +113,6 @@ const prod={
 
 module.exports.devtool=devtool;
 if (process.env.NODE_ENV!=='production') {
-    const loaders=Object.assign({}, common.module, {
-        rules: [...common.module.rules, ...dev.module.rules]
-    });
     module.exports=Object.assign({}, common, {
         plugins: [...common.plugins, ...dev.plugins],
         entry: dev.entry,
