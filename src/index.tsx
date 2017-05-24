@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {default as HelloComponent} from './components/index';
+import {HelloComponent} from './components/index';
 
 const rootTemplate=(
     <span style={{width: '100%', height: '100%', display: 'block'}}>
