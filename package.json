@@ -41,7 +41,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "webpack -p --display-error-details --profile --colors",
+    "build": "webpack -p --display-error-details --profile --colors --progress --hide-modules",
     "lint": "tslint -p './tsconfig.json'"
   }
 }
